@@ -26,6 +26,8 @@
         </button>
     </div>
 
+    <div class="dog-list"></div>
+
 <!-- JAVASCRIPT -->
 
 <script>
@@ -41,6 +43,19 @@
     const newThing = "HelloWorld";
     // newThing = "Another World";
     
+
+    const dogs = [
+        { name: "Bruce", type: "chihuahua"}, 
+        {name: "Chance", type: "bernese"}];
+    
+    const dogList = document.querySelector(".dog-list");
+    for (let i=0;i<dogs.length;i++) {
+        const dogData = document.createElement("div");
+        dogData.innerText = `${dogs[i].name} is a ${dogs[i].type}`;
+        dogList.appendChild(dogData);
+    }
+    
+
 
 </script>
 </body>
