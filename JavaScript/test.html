@@ -28,6 +28,10 @@
 
     <div class="dog-list"></div>
 
+    <div class="jumbotron text-center"><button type="button" class="btn btn-danger">My Button</button></div>    
+
+
+
 <!-- JAVASCRIPT -->
 
 <script>
@@ -49,12 +53,20 @@
         {name: "Chance", type: "bernese"}];
     
     const dogList = document.querySelector(".dog-list");
-    for (let i=0;i<dogs.length;i++) {
-        const dogData = document.createElement("div");
-        dogData.innerText = `${dogs[i].name} is a ${dogs[i].type}`;
-        dogList.appendChild(dogData);
-    }
+    // for (let i=0;i<dogs.length;i++) {
+    //     const dogData = document.createElement("div");
+    //     dogData.innerText = `${dogs[i].name} is a ${dogs[i].type}`;
+    //     dogData.classList.add("jumbotron","text-center");
+    //     dogList.appendChild(dogData);
+    // }
     
+    for(let i of dogs) {
+        const dogData = document.createElement("div");
+        dogData.innerText = `${i.name} is a ${i.type}`;
+        dogData.classList.add("jumbotron","text-center");
+        dogList.appendChild(dogData);
+
+    }
 
 
 </script>
