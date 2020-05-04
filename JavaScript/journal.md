@@ -11,6 +11,14 @@ console.groupEnd
 Object en Arrays worden niet inhoudelijk gevalueerd, kopie vergelijken is dus false
 `` in string voor variabele , bvb `${dogs[i].name} is a ${dogs[i].type}`
 Dit noemt template strings
+Number en Math bibliotheek
+Array
+Referentie w3schools
+array kan ook functies bevatten
+
+### 2020-05-04 16:15:26
+
+
 
 
 
