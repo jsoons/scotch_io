@@ -11,8 +11,18 @@ console.groupEnd
 Object en Arrays worden niet inhoudelijk gevalueerd, kopie vergelijken is dus false
 `` in string voor variabele , bvb `${dogs[i].name} is a ${dogs[i].type}`
 Dit noemt template strings
+<<<<<<< HEAD
 .jumbotron.text-center>button[type=button].btn.btn-danger{My Button}
+=======
 Number en Math bibliotheek
+Array
+Referentie w3schools
+array kan ook functies bevatten
+
+### 2020-05-04 16:15:26
+
+
+>>>>>>> 706720c1e6f1dd0bd4c9e69fadf1afe71bd3a173
 
 in template strings ook % mogelijk, nadien toevoegen, bvb %c en dan font-size:5px
 
