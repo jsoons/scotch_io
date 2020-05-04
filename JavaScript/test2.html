@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="jumbotron text-center">
+        <button class="btn btn-danger" type="button" onclick="goCoocoo()">Coocoo</button>
+    </div>
+
+    <div class="jumbotron text-center">
+        <button class="btn btn-danger coffee-btn" type="button"">Coffee</button>
+    </div>
+
+    <div class="jumbotron text-center">
+        <button class="btn btn-danger coffees-btn" type="button"">Coffees</button>
+        <button class="btn btn-danger coffees-btn" type="button"">Coffees</button>
+        <button class="btn btn-danger coffees-btn" type="button"">Coffees</button>
+    </div>
+
+    <div class="jumbotron text-center">
+        <button class="btn btn-danger green-btn" type="button"">Green</button>
+        <button class="btn btn-danger green-btn" type="button"">Green</button>
+        <button class="btn btn-danger green-btn" type="button"">Green</button>
+    </div>
+
+
+
+
+    <script>
+        function goCoocoo() {
+            document.body.style.backgroundColor = "#c00c00";
+        }
+
+        const coffeeBtn=document.querySelector(".coffee-btn");
+        coffeeBtn.onclick = function () { document.body.style.backgroundColor = "BLUE";} ;
+
+        const coffeeBtns=document.querySelectorAll(".coffees-btn");
+        coffeeBtns.forEach(function(button) {
+            button.onclick = function () { document.body.style.backgroundColor = "RED";}
+        } );
+
+        const greenBtns=document.querySelectorAll(".green-btn");
+        //greenBtns.forEach(button => button.addEventListener("click",goGreen));
+        // greenBtns.forEach(button => button.addEventListener("click",function () { document.body.style.backgroundColor = "GREEN";}));
+        greenBtns.forEach(button => button.addEventListener("click", () => { document.body.style.backgroundColor = "GREEN";}));
+
+        // function goGreen() {
+        //     document.body.style.backgroundColor = "GREEN";
+        // }
+
+
+
+    </script>
+
+</body>
+
+</html>
