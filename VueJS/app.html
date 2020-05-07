@@ -12,8 +12,26 @@
 <body>
 
   <div id="app">
+    <h1 v-once>{{title}}</h1>
     <input type="text" v-on:input="changeTitle">
-    <p>{{ title }}</p>
+    <p>{{ title }} - <a v-bind:href="link">Google</a></p>
+    {{sayHello()}}
+    <hr>
+    <p v-html="finishedLink"></p>
+    <hr>
+    <p v-html="crazyString"></p>
+    <button v-on:click="increase(2,$event)">Click Me</button>
+    {{ counter }}
+    <hr>
+    <p v-on:mousemove="updateCoordinates">Coordinates: {{x}} , {{y}}
+      <span v-on:mousemove.stop="">DEAD SPOT</span>
+    </p>
+
+    <hr>
+    <input type="text" v-model="model">
+    {{ model }}
+
+
   </div>
   <script src="app.js"></script>
 </body>
