@@ -13,13 +13,30 @@
 <body>
   <!-- our template -->
   <section id="app" class="section container">
+    {{ avatar }} <br>
+
+    <img v-bind:src="avatar" v-bind:alt="avatar" height="300" width="300">
+    <div v-if="isSuccess" class="notification is-success">
+      We did it! Successful!
+    </div>
+    <div v-if="!isSuccess" class="notification is-danger">
+      Arrgh... No sucsess .... 
+    </div>
 
   </section>
 
   <!-- our javascript -->
   <script>
     const app = new Vue({
-      el: '#app'
+      el: '#app', 
+      data: {
+        avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png', 
+        isSuccess: true
+
+      }, 
+      methods: {
+
+      }
     });
   </script>
 </body>
