@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Vue Basics</title>
@@ -10,15 +11,37 @@
   <!-- js -->
   <script src="https://unpkg.com/vue"></script>
 </head>
+
 <body>
-  
+
   <!-- our template -->
-  <section class="section container">
+  <section id="app" class="section container">
+    <p>
+      Name: {{name}} <br>
+      Username: {{username}} <br>
+      Email: {{email}} <br>
+    </p>
+
+    <a class="button is-info" v-on:click="celebrate">Do the Celebration!</a>
 
   </section>
 
   <!-- our javascript -->
   <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        name: 'Jan Soons',
+        username: 'jsoons',
+        email: 'jsoons@gmail.com'
+      },
+      methods: {
+        celebrate : function () {
+          alert(`${this.name} is celebrating`);          
+        }
+      }
+    });
   </script>
 </body>
+
 </html>

@@ -15,14 +15,52 @@
 
   <!-- plain javascript -->
   <section class="section container">
+    <h1 class="title">My Text Goed Here!</h1>
+    <input type="text" class="input" name="" id="">
   </section>
 
   <!-- vue -->
-  <section class="section container">
+  <section id="app" class="section container">
+    <h1 class="title">{{text}}</h1>
+    <input type="text" name="" id="" v-model="text">
+    <h1 class="title">Hello, my name is {{name}} and my message is: {{message}} </h1>
+    <input type="text" v-model="name">
+    <input type="text" v-model="message">
   </section>
 
   <!-- our javascript -->
   <script>
+
+    //plain javascript
+    // const heading = document.querySelector('h1');
+    // const input = document.querySelector('input');
+
+    // input.addEventListener('keyup', (e) => {
+    //   const text= e.target.value;
+    //   heading.innerText = text;
+    // });
+
+    //jquery
+    // $('input').on('keyup', (e) => {
+    //   $('h1').text(e.target.value)
+    // });
+    //jquery implicit return
+    $('input').on('keyup', (e) => $('h1').text(e.target.value));
+
+    //with vue
+    const app = new Vue({
+      el: '#app', 
+      data: {
+        text: 'Hello World!',
+        name: 'Jan',
+        message: 'Vue is awesome'
+
+      }
+    });
+
+
+
+
     
   </script>
 </body>
